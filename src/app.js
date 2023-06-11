@@ -1,3 +1,7 @@
+window.onload = function() {
+  button();
+  randomCard();
+};
 const cards = [
   "src/assets/img/2_of_clubs.png",
   "src/assets/img/2_of_diamonds.png",
@@ -28,11 +32,14 @@ const pic = document.querySelector("#thePic");
 //   var urCards = cards[Math.floor(Math.random() * cards.length)];
 //   document.img.src = urCards;
 // };
-
 function randomCard() {
   var urCards = cards[Math.floor(Math.random() * cards.length)];
   pic.innerHTML = "<img src=" + urCards + ">";
 }
-
+let button = () => {
+  document.querySelector("#button").addEventListener("click", function() {
+    randomCard();
+  });
+};
 //document.body.addEventListener("click", randomCard())
 setInterval(randomCard(), 3000);
