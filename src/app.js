@@ -1,5 +1,3 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 const cards = [
   "src/assets/img/2_of_clubs.png",
   "src/assets/img/2_of_diamonds.png",
@@ -37,4 +35,4 @@ function randomCard() {
 }
 
 //document.body.addEventListener("click", randomCard())
-setInterval(randomCard(), 1000);
+setInterval(randomCard(), 3000);
