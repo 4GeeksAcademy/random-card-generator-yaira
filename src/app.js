@@ -1,11 +1,40 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+const cards = [
+  "src/assets/img/2_of_clubs.png",
+  "src/assets/img/2_of_diamonds.png",
+  "src/assets/img/2_of_hearts.png",
+  "src/assets/img/2_of_spades.png",
+  "src/assets/img/3_of_clubs.png",
+  "src/assets/img/3_of_diamonds.png",
+  "src/assets/img/3_of_hearts.png",
+  "src/assets/img/3_of_spades.png",
+  "src/assets/img/4_of_clubs.png",
+  "src/assets/img/4_of_diamonds.png",
+  "src/assets/img/4_of_hearts.png",
+  "src/assets/img/4_of_spades.png",
+  "src/assets/img/5_of_clubs.png",
+  "src/assets/img/6_of_diamonds.png",
+  "src/assets/img/7_of_hearts.png",
+  "src/assets/img/8_of_spades.png",
+  "src/assets/img/9_of_diamonds.png",
+  "src/assets/img/10_of_clubs.png",
+  "src/assets/img/ace_of_diamonds.png",
+  "src/assets/img/jack_of_spades2.png",
+  "src/assets/img/king_of_clubs2.png",
+  "src/assets/img/queen_of_hearts2.png"
+];
+const urCards = cards[Math.floor(Math.random() * cards.length)];
+const pic = document.querySelector("#thePic");
+// window.onload = function() {
+//   var urCards = cards[Math.floor(Math.random() * cards.length)];
+//   document.img.src = urCards;
+// };
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+function randomCard() {
+  var urCards = cards[Math.floor(Math.random() * cards.length)];
+  pic.innerHTML = "<img src=" + urCards + ">";
+}
+
+//document.body.addEventListener("click", randomCard())
+setInterval(randomCard(), 1000);
