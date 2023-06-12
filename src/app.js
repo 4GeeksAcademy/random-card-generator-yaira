@@ -28,10 +28,7 @@ const cards = [
 ];
 const urCards = cards[Math.floor(Math.random() * cards.length)];
 const pic = document.querySelector("#thePic");
-// window.onload = function() {
-//   var urCards = cards[Math.floor(Math.random() * cards.length)];
-//   document.img.src = urCards;
-// };
+
 function randomCard() {
   var urCards = cards[Math.floor(Math.random() * cards.length)];
   pic.innerHTML = "<img src=" + urCards + ">";
@@ -41,5 +38,5 @@ let button = () => {
     randomCard();
   });
 };
-//document.body.addEventListener("click", randomCard())
-setInterval(randomCard(), 3000);
+
+setInterval(randomCard, 5000);
